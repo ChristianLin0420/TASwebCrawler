@@ -1,20 +1,22 @@
 
 
-# import time
+import time
 
-# from selenium import webdriver
-# from selenium.webdriver.common.keys import Keys
-# from selenium.common.exceptions import TimeoutException
-# from selenium.webdriver.support.ui import WebDriverWait
-# from selenium.webdriver.support import expected_conditions as EC
-# from selenium.webdriver.common.by import By
-# from webdriver_manager.chrome import ChromeDriverManager
+from selenium import webdriver
+from selenium.webdriver.common.keys import Keys
+from selenium.common.exceptions import TimeoutException
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.common.by import By
+from webdriver_manager.chrome import ChromeDriverManager
 
-# driver = webdriver.Chrome(ChromeDriverManager().install())
+driver = webdriver.Chrome(ChromeDriverManager().install())
 
-# default_url = "https://tas.nutrislice.com/menu/menus-eula"
-# driver.get(default_url)
+default_url = "https://tas.nutrislice.com/menu/tas/serving-line"
+driver.get(default_url)
 
+html = driver.find_element_by_xpath("/html")
+print(html)
 
 # timeout = 5
 
@@ -52,8 +54,8 @@
 
 
 
-import requests
+# import requests
 
-url ='https://tas.nutrislice.com/menu/menus-eula'
-html = requests.get(url)
-print(html.text)
+# url ='https://tas.nutrislice.com/menu/menus-eula'
+# html = requests.get(url)
+# print(html.text)
